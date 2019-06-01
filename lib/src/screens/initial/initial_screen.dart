@@ -26,7 +26,7 @@ class _InitialScreenState extends State<InitialScreen>
             Expanded(
               child: TabBarView(
                 controller: controller,
-                physics: NeverScrollableScrollPhysics(),
+               // physics: NeverScrollableScrollPhysics(),
                 children: <Widget>[
                   HomeScreen(),
                   CardsScreen(),
@@ -35,19 +35,17 @@ class _InitialScreenState extends State<InitialScreen>
               ),
             ),
             Container(
+              height: 60,
               decoration: BoxDecoration(
-                color: Theme.of(context).scaffoldBackgroundColor,
-                boxShadow: [
-                  BoxShadow(color: Colors.black26, blurRadius: 15),
-                ],
+              color: Color(0xfff2f2f2),
               ),
               child: TabBar(
                 controller: controller,
                 labelColor: Theme.of(context).primaryColor,
                 tabs: <Widget>[
-                  Tab(icon: Icon(Icons.home), text: "Home"),
-                  Tab(icon: Icon(Icons.credit_card), text: "Cards"),
-                  Tab(icon: Icon(Icons.format_list_numbered), text: "History"),
+                  Tab(icon: Icon(Icons.home,size: 35,)),
+                  Tab(icon: Icon(Icons.credit_card,size: 35)),
+                  Tab(icon: Icon(Icons.history,size: 35)),
                 ],
               ),
             ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:animated_card/animated_card.dart';
+import 'package:flutter/rendering.dart';
 import 'home_card_balanco.dart';
 import 'home_card_gastos.dart';
 import 'home_card_saldo.dart';
@@ -12,6 +13,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
+
     return SafeArea(
       child: Scaffold(
         appBar: PreferredSize(
@@ -51,22 +53,27 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
-              AnimatedCard(
-                direction: AnimatedCardDirection.left,
-                //Initial animation direction
-                initDelay: Duration(milliseconds: 0),
-                //Delay to initial animation
-                duration: Duration(seconds: 1),
-                //Initial animation duration
-                child: HomeCardGastos(),
+              InkWell(
+                onTap: (){
+                  
+                },
+                              child: AnimatedCard(
+                  direction: AnimatedCardDirection.left,
+                  //Initial animation direction
+                  initDelay: Duration(milliseconds: 0),
+                  //Delay to initial animation
+                  duration: Duration(milliseconds: 400),
+                  //Initial animation duration
+                  child: HomeCardGastos(),
+                ),
               ),
               AnimatedCard(
                 direction: AnimatedCardDirection.right,
                 //Initial animation direction
                 initDelay: Duration(milliseconds: 0),
-                //Delay to initial animation
-                duration: Duration(seconds: 1),
-                //Initial animation duration
+               
+                duration: Duration(milliseconds: 400),
+                
                 child: HomeCardSaldo(),
               ),
               AnimatedCard(
@@ -74,7 +81,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 //Initial animation direction
                 initDelay: Duration(milliseconds: 0),
                 //Delay to initial animation
-                duration: Duration(seconds: 1),
+                duration: Duration(milliseconds: 400),
                 //Initial animation duration
                 child: HomeCardBalanco(),
               ),
@@ -85,4 +92,5 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
+
 }
