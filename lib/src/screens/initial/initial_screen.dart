@@ -3,6 +3,7 @@ import 'package:international_flutter_hackathon/src/screens/cards/cards_screen.d
 import 'package:international_flutter_hackathon/src/screens/expense/expense_screen.dart';
 import 'package:international_flutter_hackathon/src/screens/history/history_screen.dart';
 import 'package:international_flutter_hackathon/src/screens/home/home_screen.dart';
+import 'package:international_flutter_hackathon/src/screens/initial/components/bottombar/bottom_bar_widget.dart';
 
 class InitialScreen extends StatefulWidget {
   @override
@@ -35,21 +36,7 @@ class _InitialScreenState extends State<InitialScreen>
                 ],
               ),
             ),
-            Container(
-              height: 60,
-              decoration: BoxDecoration(
-              color: Color(0xfff2f2f2),
-              ),
-              child: TabBar(
-                controller: controller,
-                labelColor: Theme.of(context).primaryColor,
-                tabs: <Widget>[
-                  Tab(icon: Icon(Icons.home,size: 35,)),
-                  Tab(icon: Icon(Icons.credit_card,size: 35)),
-                  Tab(icon: Icon(Icons.history,size: 35)),
-                ],
-              ),
-            ),
+            BottomBarWidget(controller),
           ],
         ),
       ),
