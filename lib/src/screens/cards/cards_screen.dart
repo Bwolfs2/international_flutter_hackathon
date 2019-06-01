@@ -4,13 +4,15 @@ import 'package:international_flutter_hackathon/src/shared/widgets/credit_card/c
 class CardsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        children: <Widget>[
-          CreditCardWidget(),
-          SizedBox(height: 25),
-          CreditCardWidget(),
-        ],
+    return Container(
+      child: Center(
+        child: Column(
+          children: <Widget>[
+            CreditCardWidget(),
+            SizedBox(height: 25),
+            CreditCardWidget(),
+          ],
+        ),
       ),
     );
   }
