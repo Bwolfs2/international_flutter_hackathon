@@ -13,7 +13,6 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-
     return SafeArea(
       child: Scaffold(
         appBar: PreferredSize(
@@ -54,43 +53,36 @@ class _HomeScreenState extends State<HomeScreen> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
               InkWell(
-                onTap: (){
-                  
-                },
-                              child: AnimatedCard(
-                  direction: AnimatedCardDirection.left,
-                  //Initial animation direction
-                  initDelay: Duration(milliseconds: 0),
-                  //Delay to initial animation
-                  duration: Duration(milliseconds: 400),
-                  //Initial animation duration
-                  child: HomeCardGastos(),
+                onTap: () {},
+                child: IgnorePointer(
+                  child: AnimatedCard(
+                    direction: AnimatedCardDirection.left,
+                    initDelay: Duration(milliseconds: 0),
+                    duration: Duration(milliseconds: 400),
+                    child: HomeCardGastos(),
+                  ),
                 ),
               ),
-              AnimatedCard(
-                direction: AnimatedCardDirection.right,
-                //Initial animation direction
-                initDelay: Duration(milliseconds: 0),
-               
-                duration: Duration(milliseconds: 400),
-                
-                child: HomeCardSaldo(),
+              IgnorePointer(
+                child: AnimatedCard(
+                  direction: AnimatedCardDirection.right,
+                  initDelay: Duration(milliseconds: 0),
+                  duration: Duration(milliseconds: 400),
+                  child: HomeCardSaldo(),
+                ),
               ),
-              AnimatedCard(
-                direction: AnimatedCardDirection.bottom,
-                //Initial animation direction
-                initDelay: Duration(milliseconds: 0),
-                //Delay to initial animation
-                duration: Duration(milliseconds: 400),
-                //Initial animation duration
-                child: HomeCardBalanco(),
+              IgnorePointer(
+                child: AnimatedCard(
+                  direction: AnimatedCardDirection.bottom,
+                  initDelay: Duration(milliseconds: 0),
+                  duration: Duration(milliseconds: 400),
+                  child: HomeCardBalanco(),
+                ),
               ),
-
             ],
           ),
         ),
       ),
     );
   }
-
 }
