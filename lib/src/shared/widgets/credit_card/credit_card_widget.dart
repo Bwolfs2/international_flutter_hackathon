@@ -4,20 +4,21 @@ import 'package:international_flutter_hackathon/src/shared/models/credit_card_mo
 class CreditCardWidget extends StatelessWidget {
   final CreditCardModel model;
 
-  const CreditCardWidget({Key key, this.model}) : super(key: key);
+  const CreditCardWidget(this.model, {Key key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 15),
+      margin: EdgeInsets.all(5),
       decoration: BoxDecoration(
-        color: Theme.of(context).scaffoldBackgroundColor,
+        color: Color(0xffff9e80),
         borderRadius: BorderRadius.circular(10),
         boxShadow: [
           BoxShadow(color: Colors.black26, blurRadius: 5),
         ],
       ),
       width: double.infinity,
-      height: 150,
+      height: 250,
       padding: EdgeInsets.all(20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -25,10 +26,28 @@ class CreditCardWidget extends StatelessWidget {
         children: <Widget>[
           Text(
             model.displayName,
-            style: TextStyle(fontSize: 16),
+            style: TextStyle(
+              fontSize: 30,
+              color: Theme.of(context).accentColor,
+              fontWeight: FontWeight.w700,
+            ),
           ),
-          Text("XXXX XXXX XXXX ${model.partialCardNumber}"),
-          Text("07/23"),
+          Text(
+            "XXXX XXXX XXXX ${model.partialCardNumber}",
+            style: TextStyle(
+              fontSize: 25,
+              color: Theme.of(context).accentColor,
+              fontWeight: FontWeight.w500,
+            ),
+          ),
+          Text(
+            "07/23",
+            style: TextStyle(
+              fontSize: 25,
+              color: Theme.of(context).accentColor,
+              fontWeight: FontWeight.w500,
+            ),
+          ),
         ],
       ),
     );

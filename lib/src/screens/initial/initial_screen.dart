@@ -35,25 +35,7 @@ class _InitialScreenState extends State<InitialScreen>
                 ],
               ),
             ),
-<<<<<<< HEAD
             BottomBarWidget(controller),
-=======
-            Container(
-              height: 60,
-              decoration: BoxDecoration(
-              color: Color(0xfff2f2f2),
-              ),
-              child: TabBar(
-                controller: controller,
-                labelColor: Theme.of(context).primaryColor,
-                tabs: <Widget>[
-                  Tab(icon: Icon(Icons.home,size: 35,)),
-                  Tab(icon: Icon(Icons.credit_card,size: 35)),
-                  Tab(icon: Icon(Icons.history,size: 35)),
-                ],
-              ),
-            ),
->>>>>>> master
           ],
         ),
       ),
