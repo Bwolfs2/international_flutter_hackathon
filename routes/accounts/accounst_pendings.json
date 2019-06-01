@@ -1,0 +1,108 @@
+{
+    "results": [
+        {
+            "timestamp": "2019-06-01T00:00:00+00:00",
+            "description": "TALKTALK TELECOM",
+            "transaction_type": "DEBIT",
+            "transaction_category": "PURCHASE",
+            "transaction_classification": [
+                "Bills and Utilities",
+                "Home Phone"
+            ],
+            "merchant_name": "TALKTALK",
+            "amount": -46.82,
+            "currency": "GBP",
+            "transaction_id": "2ca567454a0bdd3226b6f240d35a3cac",
+            "meta": {
+                "provider_transaction_category": "DEB"
+            }
+        },
+        {
+            "timestamp": "2019-06-01T00:00:00+00:00",
+            "description": "ACCOUNT OVERDRAFT FEE",
+            "transaction_type": "DEBIT",
+            "transaction_category": "BILL_PAYMENT",
+            "transaction_classification": [],
+            "amount": -0.01,
+            "currency": "GBP",
+            "transaction_id": "2dfb19737d5473d2dd60d9ca8ae55818",
+            "meta": {
+                "provider_transaction_category": "BP"
+            }
+        },
+        {
+            "timestamp": "2019-06-01T00:00:00+00:00",
+            "description": "MR JOHN SMITH",
+            "transaction_type": "DEBIT",
+            "transaction_category": "TRANSFER",
+            "transaction_classification": [],
+            "amount": -227,
+            "currency": "GBP",
+            "transaction_id": "b071f39c24ccbce550c8757e8f7506ca",
+            "meta": {
+                "provider_transaction_category": "TFR"
+            }
+        },
+        {
+            "timestamp": "2019-06-01T00:00:00+00:00",
+            "description": "TESCO",
+            "transaction_type": "DEBIT",
+            "transaction_category": "PURCHASE",
+            "transaction_classification": [
+                "Shopping",
+                "Groceries"
+            ],
+            "merchant_name": "TESCO",
+            "amount": -39.99,
+            "currency": "GBP",
+            "transaction_id": "c55bca0ceeda07e83448e37c1fac25f6",
+            "meta": {
+                "provider_transaction_category": "DEB"
+            }
+        },
+        {
+            "timestamp": "2019-06-01T00:00:00+00:00",
+            "description": "ACCOUNT OVERDRAFT FEE",
+            "transaction_type": "DEBIT",
+            "transaction_category": "BILL_PAYMENT",
+            "transaction_classification": [],
+            "amount": -0.01,
+            "currency": "GBP",
+            "transaction_id": "3db666b9c594ad40129d6fd65fb9bd00",
+            "meta": {
+                "provider_transaction_category": "BP"
+            }
+        },
+        {
+            "timestamp": "2019-06-01T00:00:00+00:00",
+            "description": "Sainsbury's",
+            "transaction_type": "DEBIT",
+            "transaction_category": "PURCHASE",
+            "transaction_classification": [
+                "Shopping",
+                "Groceries"
+            ],
+            "merchant_name": "SAINSBURY'S",
+            "amount": -23.99,
+            "currency": "GBP",
+            "transaction_id": "861a7d3686728ce0cc0366f8600a5294",
+            "meta": {
+                "provider_transaction_category": "DEB"
+            }
+        },
+        {
+            "timestamp": "2019-06-01T00:00:00+00:00",
+            "description": "MR JOHN SMITH",
+            "transaction_type": "DEBIT",
+            "transaction_category": "TRANSFER",
+            "transaction_classification": [],
+            "amount": -302.91,
+            "currency": "GBP",
+            "transaction_id": "b4a3b0b3e3c70fcb7dd03035731e8534",
+            "meta": {
+                "provider_transaction_category": "TFR"
+            }
+        }
+    ],
+    "status": "Succeeded"
+}

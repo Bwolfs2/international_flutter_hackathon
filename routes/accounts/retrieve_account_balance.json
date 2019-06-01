@@ -1,0 +1,12 @@
+{
+    "results": [
+        {
+            "currency": "GBP",
+            "available": -538.73,
+            "current": 2,
+            "overdraft": 100,
+            "update_timestamp": "2019-06-01T17:51:07.499045Z"
+        }
+    ],
+    "status": "Succeeded"
+}

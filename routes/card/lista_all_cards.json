@@ -1,0 +1,23 @@
+{
+    "results": [
+        {
+            "credentials_id": "rSeu34bqHIJk2hrzY4b2tENjGAjFVtJIJVpV+b4YNyk=",
+            "client_id": "teste-dc4bcf",
+            "privacy_policy": "Feb2019",
+            "provider": {
+                "display_name": "Mock",
+                "provider_id": "mock",
+                "logo_uri": "https://truelayer-client-logos.s3-eu-west-1.amazonaws.com/banks/banks-icons/mock-icon.svg"
+            },
+            "scopes": [
+                "info",
+                "accounts",
+                "transactions",
+                "balance",
+                "cards",
+                "offline_access"
+            ]
+        }
+    ],
+    "status": "Succeeded"
+}
