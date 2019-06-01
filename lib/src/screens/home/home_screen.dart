@@ -59,17 +59,13 @@ class _HomeScreenState extends State<HomeScreen> {
                 },
                               child: AnimatedCard(
                   direction: AnimatedCardDirection.left,
-                  //Initial animation direction
                   initDelay: Duration(milliseconds: 0),
-                  //Delay to initial animation
                   duration: Duration(milliseconds: 400),
-                  //Initial animation duration
                   child: HomeCardGastos(),
                 ),
               ),
               AnimatedCard(
                 direction: AnimatedCardDirection.right,
-                //Initial animation direction
                 initDelay: Duration(milliseconds: 0),
                
                 duration: Duration(milliseconds: 400),
@@ -78,11 +74,8 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               AnimatedCard(
                 direction: AnimatedCardDirection.bottom,
-                //Initial animation direction
                 initDelay: Duration(milliseconds: 0),
-                //Delay to initial animation
                 duration: Duration(milliseconds: 400),
-                //Initial animation duration
                 child: HomeCardBalanco(),
               ),
 
