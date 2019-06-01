@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:international_flutter_hackathon/src/screens/cards/cards_screen.dart';
+import 'package:international_flutter_hackathon/src/screens/expense/expense_screen.dart';
 import 'package:international_flutter_hackathon/src/screens/history/history_screen.dart';
 import 'package:international_flutter_hackathon/src/screens/home/home_screen.dart';
 
@@ -30,7 +31,7 @@ class _InitialScreenState extends State<InitialScreen>
                 children: <Widget>[
                   HomeScreen(),
                   CardsScreen(),
-                  HistoryScreen(),
+                  ExpenseScreen(),
                 ],
               ),
             ),
