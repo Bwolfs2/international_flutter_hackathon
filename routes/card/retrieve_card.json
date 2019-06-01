@@ -1,0 +1,21 @@
+{
+    "results": [
+        {
+            "account_id": "2cbf9b6063102763ccbe3ea62f1b3e72",
+            "account_type": "TRANSACTION",
+            "card_network": "MASTERCARD",
+            "card_type": "CREDIT",
+            "currency": "GBP",
+            "display_name": "CREDIT CARD 1",
+            "partial_card_number": "1000",
+            "name_on_card": "John Doe ",
+            "update_timestamp": "2019-06-01T17:39:55.2412695Z",
+            "provider": {
+                "display_name": "Mock",
+                "provider_id": "mock",
+                "logo_uri": "https://truelayer-client-logos.s3-eu-west-1.amazonaws.com/banks/banks-icons/mock-icon.svg"
+            }
+        }
+    ],
+    "status": "Succeeded"
+}

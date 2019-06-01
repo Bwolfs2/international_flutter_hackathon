@@ -1,0 +1,22 @@
+{
+    "results": [
+        {
+            "update_timestamp": "2019-06-01T17:49:14.1845977Z",
+            "account_id": "56c7b029e0f8ec5a2334fb0ffc2fface",
+            "account_type": "TRANSACTION",
+            "display_name": "TRANSACTION ACCOUNT 1",
+            "currency": "GBP",
+            "account_number": {
+                "swift_bic": "CPBKGB00",
+                "number": "10000000",
+                "sort_code": "01-21-31"
+            },
+            "provider": {
+                "display_name": "Mock",
+                "provider_id": "mock",
+                "logo_uri": "https://truelayer-client-logos.s3-eu-west-1.amazonaws.com/banks/banks-icons/mock-icon.svg"
+            }
+        }
+    ],
+    "status": "Succeeded"
+}
