@@ -1,20 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:bloc_pattern/bloc_pattern.dart';
+import 'package:flutter/services.dart';
 import 'package:international_flutter_hackathon/src/screens/initial/initial_bloc.dart';
 import 'package:international_flutter_hackathon/src/screens/initial/initial_screen.dart';
-import 'src/screens/home/home_screen.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
+
     return BlocProvider(
       blocs: [
         Bloc((i) => InitialBloc()),
       ],
       child: MaterialApp(
-        title: 'Flutter Demo',
+        title: 'BSYNC',
         theme: ThemeData(
           primaryColor: Color(0xff3AD29F),
           accentColor: Color(0xff736ff4),
