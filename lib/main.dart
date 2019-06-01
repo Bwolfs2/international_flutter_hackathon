@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:flutter/services.dart';
+import 'package:international_flutter_hackathon/src/login/login_screen.dart';
 import 'package:international_flutter_hackathon/src/screens/initial/initial_bloc.dart';
 import 'package:international_flutter_hackathon/src/screens/initial/initial_screen.dart';
 
@@ -38,7 +39,7 @@ class MyApp extends StatelessWidget {
             title: TextStyle(color: Colors.white),
           ),
         ),
-        home: InitialScreen(),
+        home: LoginScreen(),
       ),
     );
   }
