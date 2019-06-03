@@ -12,6 +12,7 @@ class _BottomBarWidgetState extends State<BottomBarWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 60,
       decoration: BoxDecoration(
         color: Theme.of(context).scaffoldBackgroundColor,
         boxShadow: [
@@ -22,9 +23,9 @@ class _BottomBarWidgetState extends State<BottomBarWidget> {
         controller: widget.controller,
         labelColor: Theme.of(context).primaryColor,
         tabs: <Widget>[
-          Tab(icon: Icon(Icons.home), text: "Home"),
-          Tab(icon: Icon(Icons.credit_card), text: "Cards"),
-          Tab(icon: Icon(Icons.format_list_numbered), text: "History"),
+          Tab(icon: Icon(Icons.home, size: 30,)),
+          Tab(icon: Icon(Icons.credit_card, size: 30)),
+          Tab(icon: Icon(Icons.history, size: 30)),
         ],
       ),
     );
