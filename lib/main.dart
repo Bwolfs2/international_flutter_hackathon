@@ -8,13 +8,12 @@ import 'package:international_flutter_hackathon/src/screens/initial/initial_scre
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     SystemChrome.setPreferredOrientations([
-DeviceOrientation.portraitUp,
-DeviceOrientation.portraitDown,
-]);
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
 
     return BlocProvider(
       blocs: [

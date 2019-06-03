@@ -12,7 +12,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff3AD29F),
+      backgroundColor: Colors.grey[200],
       body: Center(
         child: Container(
           padding: EdgeInsets.all(30),
@@ -21,13 +21,7 @@ class _LoginScreenState extends State<LoginScreen> {
           child: SingleChildScrollView(
             child: Column(
               children: <Widget>[
-                CircleAvatar(
-                  child: Icon(
-                    Icons.person,
-                    size: 40,
-                  ),
-                  maxRadius: 50,
-                ),
+               Container(child: Image.asset("assets/logo_cync.png") , width: 200,),
                 SizedBox(
                   height: 50,
                 ),
@@ -46,9 +40,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               ),
                               filled: true,
                             labelText: "LOGIN",
-                            labelStyle: TextStyle(
-                              color: Colors.grey[200],
-                            ),
+                           labelStyle: TextStyle(color: Color(0xff3AD29F))
                           ),
                         ),
                         SizedBox(
@@ -66,7 +58,8 @@ class _LoginScreenState extends State<LoginScreen> {
                               ),
                               filled: true,
                               labelText: "SENHA",
-                              labelStyle: TextStyle(color: Colors.grey[200])),
+                              labelStyle: TextStyle(color: Color(0xff3AD29F))
+                             ),
                         ),
                         SizedBox(
                           height: 30,
