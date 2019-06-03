@@ -1,7 +1,6 @@
 import 'package:animated_card/animated_card.dart';
 import 'package:flutter/material.dart';
 import 'package:international_flutter_hackathon/src/shared/models/credit_card_model.dart';
-import 'package:international_flutter_hackathon/src/shared/repositories/general_repository.dart';
 import 'package:international_flutter_hackathon/src/shared/widgets/credit_card/credit_card_widget.dart';
 
 class CardsScreen extends StatefulWidget {
@@ -51,40 +50,6 @@ class _CardsScreenState extends State<CardsScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: PreferredSize(
-          child: Container(
-            color: Color(0xfff2f2f2),
-            padding: const EdgeInsets.only(left: 20, top: 10),
-            child: Row(
-              children: <Widget>[
-                CircleAvatar(
-                    child: Icon(
-                      Icons.person,
-                      color: Colors.white,
-                    ),
-                    backgroundColor: Color(0xff736ff4)),
-                Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: <Widget>[
-                      Text("Bem vindo,"),
-                      Text(
-                        "Pedro da Silva",
-                        style: TextStyle(
-                          color: Color(0xff30c7b8),
-                          fontSize: 18,
-                        ),
-                      )
-                    ],
-                  ),
-                )
-              ],
-            ),
-          ),
-          preferredSize: const Size.fromHeight(70),
-        ),
         body: Center(
           child: list.isEmpty
               ? CircularProgressIndicator()
@@ -92,6 +57,7 @@ class _CardsScreenState extends State<CardsScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     AnimatedCard(
+                      duration: Duration(milliseconds: 400),
                       direction: AnimatedCardDirection.top,
                       initOffset: Offset(0, -250),
                       child: Container(

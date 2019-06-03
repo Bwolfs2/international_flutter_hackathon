@@ -16,7 +16,7 @@ class _HomeCardSaldoState extends State<HomeCardSaldo> {
         borderRadius: BorderRadius.all(Radius.circular(10)),
       ),
       width: MediaQuery.of(context).size.width,
-      height: 180,
+      height: MediaQuery.of(context).size.height *.22,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         //mainAxisAlignment: MainAxisAlignment.spaceBetween,

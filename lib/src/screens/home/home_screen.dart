@@ -13,74 +13,40 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        appBar: PreferredSize(
-          child: Container(
-            color: Color(0xfff2f2f2),
-            padding: const EdgeInsets.only(left: 20, top: 10),
-            child: Row(
-              children: <Widget>[
-                CircleAvatar(
-                    child: Icon(
-                      Icons.person,
-                      color: Colors.white,
-                    ),
-                    backgroundColor: Color(0xff736ff4)),
-                Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: <Widget>[
-                      Text("Bem vindo,"),
-                      Text(
-                        "Pedro da Silva",
-                        style:
-                            TextStyle(color: Color(0xff30c7b8), fontSize: 18),
-                      )
-                    ],
-                  ),
-                )
-              ],
+    return Scaffold(      
+      body: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: <Widget>[
+            InkWell(
+              onTap: () {},
+              child: IgnorePointer(
+                child: AnimatedCard(
+                  direction: AnimatedCardDirection.left,
+                  initDelay: Duration(milliseconds: 0),
+                  duration: Duration(milliseconds: 400),
+                  child: HomeCardGastos(),
+                ),
+              ),
             ),
-          ),
-          preferredSize: const Size.fromHeight(70),
-        ),
-        body: Padding(
-          padding: const EdgeInsets.all(20),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: <Widget>[
-              InkWell(
-                onTap: () {},
-                child: IgnorePointer(
-                  child: AnimatedCard(
-                    direction: AnimatedCardDirection.left,
-                    initDelay: Duration(milliseconds: 0),
-                    duration: Duration(milliseconds: 400),
-                    child: HomeCardGastos(),
-                  ),
-                ),
+            IgnorePointer(
+              child: AnimatedCard(
+                direction: AnimatedCardDirection.right,
+                initDelay: Duration(milliseconds: 0),
+                duration: Duration(milliseconds: 400),
+                child: HomeCardSaldo(),
               ),
-              IgnorePointer(
-                child: AnimatedCard(
-                  direction: AnimatedCardDirection.right,
-                  initDelay: Duration(milliseconds: 0),
-                  duration: Duration(milliseconds: 400),
-                  child: HomeCardSaldo(),
-                ),
+            ),
+            IgnorePointer(
+              child: AnimatedCard(
+                direction: AnimatedCardDirection.bottom,
+                initDelay: Duration(milliseconds: 0),
+                duration: Duration(milliseconds: 400),
+                child: HomeCardBalanco(),
               ),
-              IgnorePointer(
-                child: AnimatedCard(
-                  direction: AnimatedCardDirection.bottom,
-                  initDelay: Duration(milliseconds: 0),
-                  duration: Duration(milliseconds: 400),
-                  child: HomeCardBalanco(),
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

@@ -21,23 +21,57 @@ class _InitialScreenState extends State<InitialScreen>
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Scaffold(
-        body: Column(
-          children: <Widget>[
-            Expanded(
-              child: TabBarView(
-                controller: controller,
-               // physics: NeverScrollableScrollPhysics(),
+    return SafeArea(
+      child: Container(
+        child: Scaffold(
+            appBar: PreferredSize(
+            child: Container(
+              color: Color(0xfff2f2f2),
+              padding: const EdgeInsets.only(left: 20, top: 10),
+              child: Row(
                 children: <Widget>[
-                  HomeScreen(),
-                  CardsScreen(),
-                  ExpenseScreen(),
+                  CircleAvatar(
+                      child: Icon(
+                        Icons.person,
+                        color: Colors.white,
+                      ),
+                      backgroundColor: Color(0xff736ff4)),
+                  Padding(
+                    padding: const EdgeInsets.all(5.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: <Widget>[
+                        Text("Bem vindo,"),
+                        Text(
+                          "Pedro da Silva",
+                          style:
+                              TextStyle(color: Color(0xff30c7b8), fontSize: 18),
+                        )
+                      ],
+                    ),
+                  )
                 ],
               ),
             ),
-            BottomBarWidget(controller),
-          ],
+            preferredSize: const Size.fromHeight(70),
+          ),
+          body: Column(
+            children: <Widget>[
+              Expanded(
+                child: TabBarView(
+                  controller: controller,
+                 // physics: NeverScrollableScrollPhysics(),
+                  children: <Widget>[
+                    HomeScreen(),
+                    CardsScreen(),
+                    ExpenseScreen(),
+                  ],
+                ),
+              ),
+              BottomBarWidget(controller),
+            ],
+          ),
         ),
       ),
     );
